@@ -49,17 +49,13 @@ UICornerButton.Parent = nButton
 
 -- Button click event
 nButton.MouseButton1Click:Connect(function()
-    local vim = game:GetService("VirtualInputManager")
-    vim:SendKeyEvent(true, Enum.KeyCode.N, false, game) -- Changed to "N"
+    -- You can add functionality here if needed
 end)
 
--- Key press event to send the key press
+-- Key press event to handle specific actions (if needed)
 UserInputService.InputBegan:Connect(function(input, isProcessed)
     if isProcessed then return end
-    if input.KeyCode == Enum.KeyCode.N then -- Key to send
-        local vim = game:GetService("VirtualInputManager")
-        vim:SendKeyEvent(true, Enum.KeyCode.N, false, game) -- Changed to "N"
-    end
+    -- Handle key inputs if needed
 end)
 
 -- Variable to track if the notification has been shown
